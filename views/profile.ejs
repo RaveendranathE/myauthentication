@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+      
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+                <a href="/user/edit/<%= user._id %>"class="btn btn-warning"><i class="glyphicon glyphicon-edit" ></i> Edit</a>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>first name</strong>: <%= user.local.fname %><br>
+                        <strong>last name</strong>: <%= user.local.lname %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>address</strong>: <%= user.local.address %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+              
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
